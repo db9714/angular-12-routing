@@ -1,0 +1,18 @@
+<div class="d-flex mt-5 flex-column">
+    <div>
+        <img alt="logo" src="../../assets/images/sbi.jpeg" style="height: 350px;width: 100%;" />
+    </div>
+    <div class="text-start pt-4 pb-4 flex-column d-flex" style="border-bottom: 0.5px solid grey;">
+        <span style="font-size: 25px;font-family: sans-serif;" *ngIf="selectedResult[0].name">{{selectedResult[0].name}}</span>
+        <span *ngIf="selectedResult[0].description">{{selectedResult[0].description}}</span>
+    </div>
+
+    <div class="text-start my-4  d-flex align-items-center">
+        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <div class="mx-3">
+
+            <span>{{selectedResult[0].location}}</span>
+        </div>
+    </div>
+    <button class="btn btn-primary" (click)="backToResult()">Back</button>
+</div>
