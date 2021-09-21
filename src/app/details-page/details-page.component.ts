@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SampleData } from "../../assets/data/data"
 
 @Component({
@@ -8,11 +9,11 @@ import { SampleData } from "../../assets/data/data"
 })
 export class DetailsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,) { }
   selectedResult: any = [];
   ngOnInit(): void {
     let record = SampleData.filter(itm => itm.id.toString() == window.location.pathname.split("/details/")[1].toString())
     this.selectedResult = record;
   }
-  backToResult = () => window.location.href = "/"
+  backToResult = () => this.router.navigate(["/"])
 }
