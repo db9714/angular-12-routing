@@ -12,3 +12,21 @@
   width: 100%;
   padding: 10px;
 }
+.blockStyle {
+  margin: 0px 20px;
+}
+.imgStyle {
+  height: 150px;
+  width: 250px;
+}
+@media only screen and (max-width: 480px) {
+  .imgStyle {
+    height: 150px;
+    width: 150px;
+  }
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    border: 0.5px solid;
+  }
+}
